@@ -107,3 +107,15 @@ var [x, y] = node.position;
 var { title, color, width } = node;
 ```
 
+## Use for-of
+
+This should help in misusing for-in as well as reduce code
+
+```
+let myArray = [3, 5, 7];
+
+for (let i of myArray) {
+   console.log(i); // logs "3", "5", "7"
+}
+```
+
