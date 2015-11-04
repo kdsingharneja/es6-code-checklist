@@ -40,9 +40,9 @@ on application wide scope. These are immutable!!
 If you must go classical class approach, then use **class**. This is going more Java way of doing things but you will still able to write object oriented prototype patterns with a classical classes approach, the class syntax has support for inheritance, super calls, instance and static properties and constructors.
 
 ```
-class Prius extends Car { //**extends** available now
-  constructor(speed) { // **constructor** available now
-    super(); //**super** available now
+class Prius extends Car { //'extends' available now
+  constructor(speed) { //'constructor' available now
+    super(); //'super' available now
     this.speed = speed;
   }
 
@@ -54,12 +54,29 @@ class Prius extends Car { //**extends** available now
     super.drive();
   }
 
-  static create() {  //**singleton** baby!
+  static create() {  //'factory' baby!
     return new Prius();
   }
 }
 ```
 
+## Prefer default param values and reduce code
+
+Instead of 
+
+```
+function f(x, y) {
+  y = y || 100;
+  return x + y;
+}
+```
+do
+
+```
+function f(x, y = 100) {
+  return x + y;
+}
+```
 
 
 
