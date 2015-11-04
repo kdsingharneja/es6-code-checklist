@@ -160,3 +160,26 @@ for (let i of myArray) {
 }
 ```
 
+## Use new way of defining variadic functions. Rest params a.k.a . three dots
+
+Instead of 
+
+```
+function PrintList() {
+  for (let i = 0; i < arguments.length; i++) {
+    document.write(arguments[i] + "<br />");
+  }
+}
+
+PrintList('Google', 'Microsoft', 'Yahoo', 'Adobe');
+```
+
+do
+
+```
+function PrintList(...values) {
+   for (var val of values) {
+     ...
+   }
+}
+```
