@@ -21,6 +21,28 @@ try {
 	);
 }
 ```
+
+## Shorthand for Method Definition
+
+Reduce code verbosity by doing...
+
+```
+obj = {
+   getTitle() {
+      return 'obj';
+   },
+};
+```
+
+..instead of ...
+
+var obj = {
+  getTitle: function getTitle() {
+    return 'obj';
+  };
+};
+```
+
 ## Prefer const
 
 Instead of 
