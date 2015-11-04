@@ -78,6 +78,32 @@ function f(x, y = 100) {
 }
 ```
 
+## Simplify assignments
 
+In order to make something like
 
+```
+var node = {
+  position: [0, 0],
+  title: 'Default',
+  color: 'red',
+  width: 10
+};
+```
+Avoid this...
+
+```
+var x = node.position[0];
+var y = node.position[1];
+var title = node.title;
+var color = node.color;
+var width = node.width;
+```
+
+..and do this...
+
+```
+var [x, y] = node.position;
+var { title, color, width } = node;
+```
 
