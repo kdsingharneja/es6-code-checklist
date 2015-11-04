@@ -36,11 +36,30 @@ obj = {
 
 ..instead of ...
 
+```
 var obj = {
   getTitle: function getTitle() {
     return 'obj';
   };
 };
+```
+
+## Prefer property value shorthand
+
+Instead of...
+
+```
+function f( x, y ) {
+  return { x: x, y: y };
+}
+```
+
+..do..yeah!
+
+```
+function f( x, y ) {
+  return { x, y };
+}
 ```
 
 ## Prefer const
