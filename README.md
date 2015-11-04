@@ -183,3 +183,22 @@ function PrintList(...values) {
    }
 }
 ```
+
+## Use template strings
+
+Instead of ...
+
+```
+console.log('A rather long string' +
+      'that actually just keeps going and going -- an error ' +
+      'message to make the Energizer bunny blush (right through ');
+```
+
+prefer to do the following
+
+```
+console.log(`A rather long string' +
+      'that actually just keeps going and going until ${new Date} `);
+```
+
+which has the added advantage of interpolation!!
